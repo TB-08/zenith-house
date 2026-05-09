@@ -30,7 +30,36 @@
         <link rel="stylesheet" href="assets/css/blog-fix.css">
         <link rel="stylesheet" href="assets/css/newsletter-fix.css">
         <link rel="stylesheet" href="assets/css/flash-fix.css">
+        <link rel="stylesheet" href="assets/css/nav-dropdown.css">
+        <link rel="stylesheet" href="assets/css/service-sections.css">
+        <link rel="stylesheet" href="assets/css/sidebar-premium.css">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            .slider-3 .slider-item .slider-content-wrap {
+                padding: 180px 0 100px 0;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            @media (max-height: 800px) {
+                .slider-3 .slider-item .slider-content-wrap {
+                    padding: 120px 0 60px 0;
+                }
+                .slider-3 .section-title {
+                    font-size: 72px !important;
+                }
+            }
+            .header .primary-header-inner .header-menu-wrap ul li a {
+                padding: 25px 0;
+            }
+            .header .primary-header-inner .header-logo img {
+                max-width: 140px;
+            }
+            .header-btn {
+                padding: 12px 25px !important;
+            }
+        </style>
     </head>
 
     <body>
@@ -54,11 +83,22 @@
                                         <li class="active">
                                             <a href="index.html">Trang chủ</a>
                                         </li>
-                                        <li>
-                                            <a href="service.html">Dịch vụ</a>
+                                        <li class="has-submenu">
+                                            <a href="service.html">Dịch vụ <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="thiet-ke-kien-truc.html">Thiết kế kiến trúc</a></li>
+                                                <li><a href="thiet-ke-noi-that.html">Thiết kế & Thi công nội thất</a></li>
+                                                <li><a href="thi-cong-phan-tho.html">Thi công phần thô</a></li>
+                                                <li><a href="xay-nha-tron-goi.html">Xây nhà trọn gói</a></li>
+                                            </ul>
                                         </li>
-                                        <li>
-                                            <a href="portfolio.html">Dự án</a>
+                                        <li class="has-submenu">
+                                            <a href="portfolio.html">Dự án <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="nha-pho.html">Nhà Phố</a></li>
+                                                <li><a href="biet-thu.html">Biệt Thự</a></li>
+                                                <li><a href="can-ho.html">Căn Hộ</a></li>
+                                            </ul>
                                         </li>
                                         <li>
                                             <a href="about.html">Về chúng tôi</a>
@@ -85,16 +125,7 @@
                             <div class="search-icon dl-search-icon">
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </div>
-                            <div class="sidebar-icon">
-                                <button class="sidebar-trigger open">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11 2C11 0.89543 11.8954 0 13 0H14C15.1046 0 16 0.895431 16 2V3C16 4.10457 15.1046 5 14 5H13C11.8954 5 11 4.10457 11 3V2Z" fill="white"/>
-                                        <path d="M0 2C0 0.89543 0.895431 0 2 0H3C4.10457 0 5 0.895431 5 2V3C5 4.10457 4.10457 5 3 5H2C0.89543 5 0 4.10457 0 3V2Z" fill="white"/>
-                                        <path d="M0 13C0 11.8954 0.895431 11 2 11H3C4.10457 11 5 11.8954 5 13V14C5 15.1046 4.10457 16 3 16H2C0.89543 16 0 15.1046 0 14V13Z" fill="white"/>
-                                        <path d="M11 13C11 11.8954 11.8954 11 13 11H14C15.1046 11 16 11.8954 16 13V14C16 15.1046 15.1046 16 14 16H13C11.8954 16 11 15.1046 11 14V13Z" fill="white"/>
-                                    </svg>
-                                </button>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -114,83 +145,58 @@
 
         <div id="sidebar-area" class="sidebar-area">
             <button class="sidebar-trigger close">
-                <svg
-                    class="sidebar-close"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    x="0px"
-                    y="0px"
-                    width="16px"
-                    height="12.7px"
-                    viewBox="0 0 16 12.7"
-                    style="enable-background: new 0 0 16 12.7"
-                    xml:space="preserve">
-                    <g>
-                        <rect
-                            x="0"
-                            y="5.4"
-                            transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.1569 7.5208)"
-                            width="16"
-                            height="2"
-                        ></rect>
-                        <rect
-                            x="0"
-                            y="5.4"
-                            transform="matrix(0.7071 0.7071 -0.7071 0.7071 6.8431 -3.7929)"
-                            width="16"
-                            height="2"
-                        ></rect>
-                    </g>
+                <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1.5 1.5L14.5 14.5M14.5 1.5L1.5 14.5" stroke="white" stroke-width="2" stroke-linecap="round"/>
                 </svg>
             </button>
             <div class="side-menu-content">
-                <div class="side-menu-logo">
-                    <a class="dark-img" href="index.html"><img src="assets/img/logo/zenith-logo.png" alt="logo"></a>
-                    <a class="light-img" href="index.html"><img src="assets/img/logo/zenith-logo.png" alt="logo"></a>
-                </div>
-                <div class="side-menu-wrap"></div>
-                <div class="side-menu-about">
-                    <h4 class="title">Chúng tôi kiến tạo không gian nội thất vượt thời gian và đầy cảm hứng</h4>
-                </div>
-                <div class="side-menu-gallary">
-                    <div class="side-menu-gallary-item">
-                        <a href="https://images.unsplash.com/photo-1616137422495-1e9e47e217c2?q=80&w=600&auto=format&fit=crop" class="venobox" data-gall="gallary1"><img src="https://images.unsplash.com/photo-1616137422495-1e9e47e217c2?q=80&w=600&auto=format&fit=crop" alt="img"></a>
+                <div class="side-menu-top">
+                    <div class="side-menu-logo">
+                        <a href="index.html"><img src="assets/img/logo/zenith-logo.png" alt="logo"></a>
                     </div>
-                    <div class="side-menu-gallary-item">
-                        <a href="https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=600&auto=format&fit=crop" class="venobox" data-gall="gallary1"><img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?q=80&w=600&auto=format&fit=crop" alt="img"></a>
-                    </div>
-                    <div class="side-menu-gallary-item">
-                        <a href="https://images.unsplash.com/photo-1615873968403-89e068628265?q=80&w=600&auto=format&fit=crop" class="venobox" data-gall="gallary1"><img src="https://images.unsplash.com/photo-1615873968403-89e068628265?q=80&w=600&auto=format&fit=crop" alt="img"></a>
-                    </div>
-                    <div class="side-menu-gallary-item">
-                        <a href="https://images.unsplash.com/photo-1616489953149-8e47455d3e0f?q=80&w=600&auto=format&fit=crop" class="venobox" data-gall="gallary1"><img src="https://images.unsplash.com/photo-1616489953149-8e47455d3e0f?q=80&w=600&auto=format&fit=crop" alt="img"></a>
-                    </div>
-                    <div class="side-menu-gallary-item">
-                        <a href="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600&auto=format&fit=crop" class="venobox" data-gall="gallary1"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600&auto=format&fit=crop" alt="img"></a>
-                    </div>
-                    <div class="side-menu-gallary-item">
-                        <a href="https://images.unsplash.com/photo-1600607687940-c52af096999a?q=80&w=600&auto=format&fit=crop" class="venobox" data-gall="gallary1"><img src="https://images.unsplash.com/photo-1600607687940-c52af096999a?q=80&w=600&auto=format&fit=crop" alt="img"></a>
+                    <div class="side-menu-about" style="margin-top: 40px;">
+                        <h4 class="title">Chúng tôi kiến tạo những thiết kế nội thất vượt thời gian và đầy cảm hứng</h4>
                     </div>
                 </div>
-                <div class="side-menu-contact">
-                    <ul class="side-menu-list">
-                        <li>
-                            123 Đường Kiến Trúc, <br>Quận 1, TP. Hồ Chí Minh,<br> Việt Nam
-                        </li>
-                        <li>
-                            <a href="tel:+0844560789">+(084) 456-0789</a>
-                        </li>
-                        <li>
-                            <a class="mail" href="mailto:support@example.com">support@example.com</a>
-                        </li>
+
+                <div class="side-menu-middle">
+                    <div class="side-menu-gallary">
+                        <div class="side-menu-gallary-item">
+                            <a href="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" class="venobox" data-gall="gallary1"><img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
+                        </div>
+                        <div class="side-menu-gallary-item">
+                            <a href="https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=800" class="venobox" data-gall="gallary1"><img src="https://images.pexels.com/photos/1571471/pexels-photo-1571471.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
+                        </div>
+                        <div class="side-menu-gallary-item">
+                            <a href="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800" class="venobox" data-gall="gallary1"><img src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
+                        </div>
+                        <div class="side-menu-gallary-item">
+                            <a href="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800" class="venobox" data-gall="gallary1"><img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
+                        </div>
+                        <div class="side-menu-gallary-item">
+                            <a href="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=800" class="venobox" data-gall="gallary1"><img src="https://images.pexels.com/photos/1643384/pexels-photo-1643384.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
+                        </div>
+                        <div class="side-menu-gallary-item">
+                            <a href="https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg?auto=compress&cs=tinysrgb&w=800" class="venobox" data-gall="gallary1"><img src="https://images.pexels.com/photos/1643389/pexels-photo-1643389.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="side-menu-bottom">
+                    <div class="side-menu-contact">
+                        <ul class="side-menu-list">
+                            <li>123 Đường Kiến Trúc, Quận 1, TP. Hồ Chí Minh</li>
+                            <li><a href="tel:0123456789">0123 456 789</a></li>
+                            <li><a class="mail" href="mailto:info@zenithhouse.vn">info@zenithhouse.vn</a></li>
+                        </ul>
+                    </div>
+                    <ul class="side-menu-social" style="margin-top: 20px;">
+                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
                     </ul>
                 </div>
-                <ul class="side-menu-social">
-                    <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li class="g-plus"><a href="#"><i class="fab fa-fab fa-google-plus"></i></a></li>
-                </ul>
             </div>
         </div>
         <!--/.sidebar-area-->
@@ -222,18 +228,18 @@
                     </ul>
                 </div>
                 <ul class="side-menu-social">
-                    <li class="facebook"><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                    <li class="instagram"><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li class="twitter"><a href="#"><i class="fab fa-twitter"></i></a></li>
-                    <li class="g-plus"><a href="#"><i class="fab fa-fab fa-google-plus"></i></a></li>
+                    <li class="facebook"><a href="javascript:void(0);"><i class="fab fa-facebook-f"></i></a></li>
+                    <li class="instagram"><a href="javascript:void(0);"><i class="fab fa-instagram"></i></a></li>
+                    <li class="twitter"><a href="javascript:void(0);"><i class="fab fa-twitter"></i></a></li>
+                    <li class="g-plus"><a href="javascript:void(0);"><i class="fab fa-fab fa-google-plus"></i></a></li>
                 </ul>
             </div>
         </div>
         <!-- /.mobile-side-menu -->
         <div class="mobile-side-menu-overlay"></div>
 
-    <div id="antra-smooth-wrapper">
-        <div id="antra-smooth-content">
+    <div id="zenith-smooth-wrapper">
+        <div id="zenith-smooth-content">
 
         <section class="slider-section slider-ready overflow-hidden">
             <div class="slider-2 slider-3">
@@ -243,13 +249,13 @@
                         <div class="slider-content-wrap">
                             <div class="slider-content">
                                 <div class="section-heading white-content text-center mb-0">
-                                    <h4 class="sub-heading" style="text-transform: uppercase; letter-spacing: 4px; font-weight: 300; font-size: 14px; margin-bottom: 30px;">Giải Pháp Không Gian Sống</h4>
-                                    <h2 class="section-title" style="font-size: 82px; line-height: 1.1; font-weight: 200; letter-spacing: -2px;">Nâng Tầm Phong Cách <br><span style="font-weight: 700; color: #C8A97E;">Ngôi Nhà Của Bạn</span></h2>
-                                    <div class="slider-desc" style="max-width: 700px; margin: 30px auto 0; opacity: 0.8; font-size: 18px; font-weight: 300;">
+                                    <h4 class="sub-heading" style="text-transform: uppercase; letter-spacing: 4px; font-weight: 300; font-size: 13px; margin-bottom: 20px;">Giải Pháp Không Gian SỐng</h4>
+                                    <h2 class="section-title" style="font-size: 78px; line-height: 1.1; font-weight: 200; letter-spacing: -2px;">Nâng Tầm Phong Cách <br><span style="font-weight: 700; color: #C8A97E;">Ngôi Nhà Của Bạn</span></h2>
+                                    <div class="slider-desc" style="max-width: 650px; margin: 20px auto 0; opacity: 0.8; font-size: 17px; font-weight: 300;">
                                         <p>Biến tầm nhìn của bạn thành hiện thực với các thiết kế sáng tạo, tạo ra không gian hiện đại kết hợp giữa công năng và tính thẩm mỹ.</p>
                                     </div>
-                                    <div class="slider-btn mt-40">
-                                        <a href="service.html" class="hero-circle-btn" style="width: 90px; height: 90px; border-radius: 50%; background: transparent; color: white; display: inline-flex; align-items: center; justify-content: center; text-align: center; font-weight: 600; text-transform: uppercase; font-size: 10px; line-height: 1.3; letter-spacing: 0.5px; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.4); flex-direction: column; text-decoration: none;">
+                                    <div class="slider-btn mt-30">
+                                        <a href="service.html" class="hero-circle-btn" style="width: 85px; height: 85px; border-radius: 50%; background: transparent; color: white; display: inline-flex; align-items: center; justify-content: center; text-align: center; font-weight: 600; text-transform: uppercase; font-size: 9px; line-height: 1.3; letter-spacing: 0.5px; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.4); flex-direction: column; text-decoration: none;">
                                             <span>Xem</span>
                                             <span>Dịch Vụ</span>
                                         </a>
@@ -287,8 +293,11 @@
                                 <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03">Thành lập từ 2010</h4>
                                 <h2 class="section-title cursor-effect title-2" style="font-size: 54px; line-height: 1.1; margin-bottom: 25px; color: #432d21;">
                                     <span style="font-weight: 200; color: #432d21;">Kiến trúc và </span>
-                                    <span style="font-weight: 800; color: #C8A97E;">nội thất, <br>chuyên môn</span>
-                                    <span style="font-weight: 200; color: #432d21;"> của chúng tôi</span>
+                                    <span style="font-weight: 800; color: #C8A97E;">nội thất,</span><br>
+                                    <span style="display: inline-block; white-space: nowrap;">
+                                        <span style="font-weight: 800; color: #C8A97E;">chuyên môn</span>
+                                        <span style="font-weight: 200; color: #432d21;"> của chúng tôi</span>
+                                    </span>
                                 </h2>
                                 <p>Chúng tôi tin rằng mọi không gian đều có sức mạnh truyền cảm hứng, và thiết kế tuyệt vời sẽ đánh thức cảm hứng đó. Sứ mệnh của chúng tôi là kiến tạo những không gian khơi dậy sự sáng tạo, cảm xúc và phản ánh cá tính của gia chủ.</p>
                             </div>
@@ -311,55 +320,6 @@
             </div>
         </section>
         <!-- ./ about-section -->
-
-        <section class="service-section-3 overflow-hidden" style="background: #0d0d0d; min-height: 100vh; display: flex; align-items: center; padding: 80px 0;">
-            <div class="bg-img" data-background="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2000&auto=format&fit=crop" style="opacity: 0.2;"></div>
-            <div class="container container-2">
-                <div class="row fade-wrapper align-items-center">
-                    <div class="col-lg-5">
-                        <div class="service-left-content-3 white-content fade-top">
-                            <div class="section-heading white-content mb-40">
-                                <h4 class="sub-heading" data-text-animation="fade-in-right" data-split="char" data-duration="0.9" data-stagger="0.03" style="border: 1px solid rgba(255,255,255,0.1); border-radius: 100px; padding: 4px 15px; text-transform: uppercase; font-size: 9px; letter-spacing: 3px; margin-bottom: 35px; background: rgba(255,255,255,0.02); display: inline-block; color: rgba(255,255,255,0.5);">SERVICE ARCHITECTURE</h4>
-                                <h2 class="section-title cursor-effect title-2" style="font-size: 54px; line-height: 1.05; font-weight: 200; letter-spacing: -1.5px; margin-bottom: 25px;">Khám Phá Các Dịch Vụ <br><span style="color: #C8A97E; font-weight: 700;">Thiết Kế Nội Thất <br>Toàn Diện</span></h2>
-                                <div class="desc mb-40" style="max-width: 400px; opacity: 0.5; font-size: 14px; line-height: 1.8; font-weight: 300; letter-spacing: 0.2px;"><p>Chúng tôi cung cấp các giải pháp thiết kế toàn diện, từ ý tưởng ban đầu đến hiện thực hóa không gian sống hoàn hảo, mang lại trải nghiệm sống đẳng cấp.</p></div>
-                            </div>
-                            <div class="service-btn">
-                                <a href="service.html" class="tl-primary-btn white-btn" style="border-radius: 100px; padding: 10px 25px; text-transform: uppercase; font-weight: 600; font-size: 11px; border: 1px solid rgba(255,255,255,0.15); display: inline-flex; align-items: center; gap: 10px; transition: all 0.4s ease; letter-spacing: 1px;">XEM TẤT CẢ <span class="icon" style="background: #C8A97E; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center;"><i class="fa-solid fa-arrow-up-right" style="font-size: 12px; color: white;"></i></span></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-7">
-                        <div class="service-static-wrap-3" style="display: flex; gap: 20px; align-items: center; justify-content: center;">
-                            <!-- Service 1 -->
-                            <div class="service-item-3" style="position: relative; border-radius: 20px; overflow: hidden; width: 100%; aspect-ratio: 1/1; background: #222; flex: 1; box-shadow: 0 15px 30px rgba(0,0,0,0.3);">
-                                <div class="service-thumb" style="height: 100%; margin-bottom: 0; position: relative;">
-                                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=800&auto=format&fit=crop" alt="service" style="width: 100%; height: 100%; object-fit: cover;">
-                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 100%); z-index: 1;"></div>
-                                    <span class="number" style="font-size: 80px; font-weight: 900; color: rgba(255,255,255,0.06); position: absolute; top: -10px; left: 15px; z-index: 0; pointer-events: none; font-family: var(--tl-ff-heading);">01</span>
-                                </div>
-                                <div class="service-content" style="position: absolute; bottom: 25px; left: 25px; right: 25px; z-index: 2;">
-                                    <h5 class="title" style="margin-bottom: 8px;"><a href="service-details.html" style="color: white; font-size: 26px; font-weight: 400; letter-spacing: -0.5px;">Thiết Kế Nội Thất</a></h5>
-                                    <p style="color: rgba(255,255,255,0.6); font-size: 13px; margin-bottom: 0; line-height: 1.5;">Kiến tạo không gian sống cá nhân hóa, tối ưu công năng.</p>
-                                </div>
-                            </div>
-                            <!-- Service 2 -->
-                            <div class="service-item-3" style="position: relative; border-radius: 20px; overflow: hidden; width: 100%; aspect-ratio: 1/1; background: #222; flex: 1; box-shadow: 0 15px 30px rgba(0,0,0,0.3);">
-                                <div class="service-thumb" style="height: 100%; margin-bottom: 0; position: relative;">
-                                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop" alt="service" style="width: 100%; height: 100%; object-fit: cover;">
-                                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.2) 100%); z-index: 1;"></div>
-                                    <span class="number" style="font-size: 80px; font-weight: 900; color: rgba(255,255,255,0.06); position: absolute; top: -10px; left: 15px; z-index: 0; pointer-events: none; font-family: var(--tl-ff-heading);">02</span>
-                                </div>
-                                <div class="service-content" style="position: absolute; bottom: 25px; left: 25px; right: 25px; z-index: 2;">
-                                    <h5 class="title" style="margin-bottom: 8px;"><a href="service-details.html" style="color: white; font-size: 26px; font-weight: 400; letter-spacing: -0.5px;">Văn Phòng & TM</a></h5>
-                                    <p style="color: rgba(255,255,255,0.6); font-size: 13px; margin-bottom: 0; line-height: 1.5;">Môi trường làm việc sáng tạo, nâng tầm giá trị thương hiệu.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ./ service-section -->
         
         <section class="skill-section overflow-hidden" style="position: relative; background: #fff; min-height: 100vh; display: flex; align-items: center; padding: 60px 0;">
             <div class="skill-text" style="position: absolute; top: 50%; left: 0; transform: translateY(-50%); font-size: 250px; font-weight: 900; color: rgba(0,0,0,0.02); z-index: 0; line-height: 1; pointer-events: none; text-transform: uppercase; white-space: nowrap; font-family: var(--tl-ff-heading);">Zenith House</div>
@@ -595,7 +555,7 @@
                                 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Ngôi Nhà Hài Hòa Cùng Biển</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Ngôi Nhà Hài Hòa Cùng Biển</a></h3>
                                 <span>Đà Nẵng, Việt Nam | 2025</span>
                             </div>
                         </div>
@@ -604,7 +564,7 @@
                                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Văn Phòng Hiện Đại Zenith</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Văn Phòng Hiện Đại Zenith</a></h3>
                                 <span>TP. HCM, Việt Nam | 2025</span>
                             </div>
                         </div>
@@ -613,7 +573,7 @@
                                 <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Căn Hộ Penthouse Luxury</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Căn Hộ Penthouse Luxury</a></h3>
                                 <span>Hà Nội, Việt Nam | 2024</span>
                             </div>
                         </div>
@@ -622,7 +582,7 @@
                                 <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Biệt Thự Ven Biển Đà Nẵng</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Biệt Thự Ven Biển Đà Nẵng</a></h3>
                                 <span>Đà Nẵng, Việt Nam | 2025</span>
                             </div>
                         </div>
@@ -631,7 +591,7 @@
                                 <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Chuỗi Café Art Décor</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Chuỗi Café Art Décor</a></h3>
                                 <span>Cần Thơ, Việt Nam | 2024</span>
                             </div>
                         </div>
@@ -640,7 +600,7 @@
                                 <img src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Nhà Phố Hiện Đại Thủ Đức</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Nhà Phố Hiện Đại Thủ Đức</a></h3>
                                 <span>Thủ Đức, TP. HCM | 2025</span>
                             </div>
                         </div>
@@ -651,7 +611,7 @@
                                 <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Ngôi Nhà Hài Hòa Cùng Biển</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Ngôi Nhà Hài Hòa Cùng Biển</a></h3>
                                 <span>Đà Nẵng, Việt Nam | 2025</span>
                             </div>
                         </div>
@@ -660,7 +620,7 @@
                                 <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Văn Phòng Hiện Đại Zenith</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Văn Phòng Hiện Đại Zenith</a></h3>
                                 <span>TP. HCM, Việt Nam | 2025</span>
                             </div>
                         </div>
@@ -669,7 +629,7 @@
                                 <img src="https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Căn Hộ Penthouse Luxury</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Căn Hộ Penthouse Luxury</a></h3>
                                 <span>Hà Nội, Việt Nam | 2024</span>
                             </div>
                         </div>
@@ -678,7 +638,7 @@
                                 <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Biệt Thự Ven Biển Đà Nẵng</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Biệt Thự Ven Biển Đà Nẵng</a></h3>
                                 <span>Đà Nẵng, Việt Nam | 2025</span>
                             </div>
                         </div>
@@ -687,7 +647,7 @@
                                 <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Chuỗi Café Art Décor</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Chuỗi Café Art Décor</a></h3>
                                 <span>Cần Thơ, Việt Nam | 2024</span>
                             </div>
                         </div>
@@ -696,7 +656,7 @@
                                 <img src="https://images.unsplash.com/photo-1480074568708-e7b720bb3f09?auto=format&fit=crop&q=80&w=800" alt="project">
                             </div>
                             <div class="project-content">
-                                <h3 class="title"><a href="portfolio-details.html">Nhà Phố Hiện Đại Thủ Đức</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Nhà Phố Hiện Đại Thủ Đức</a></h3>
                                 <span>Thủ Đức, TP. HCM | 2025</span>
                             </div>
                         </div>
@@ -872,22 +832,22 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <div class="gallary-inner-item">
-                                            <a href="#"><img src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
+                                            <a href="javascript:void(0);"><img src="https://images.pexels.com/photos/1571468/pexels-photo-1571468.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="gallary-inner-item">
-                                            <a href="#"><img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
+                                            <a href="javascript:void(0);"><img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="gallary-inner-item">
-                                            <a href="#"><img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
+                                            <a href="javascript:void(0);"><img src="https://images.pexels.com/photos/1571458/pexels-photo-1571458.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
                                         </div>
                                     </div>
                                     <div class="swiper-slide">
                                         <div class="gallary-inner-item">
-                                            <a href="#"><img src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
+                                            <a href="javascript:void(0);"><img src="https://images.pexels.com/photos/2724749/pexels-photo-2724749.jpeg?auto=compress&cs=tinysrgb&w=800" alt="img"></a>
                                         </div>
                                     </div>
                                 </div>
@@ -927,7 +887,7 @@
                                     <li>25 Tháng 12, 2025</li>
                                     <li>Bởi <span>Admin</span></li>
                                 </ul>
-                                <h3 class="title"><a href="#">Bí quyết tối ưu hóa không gian cho ngôi nhà nhỏ</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Bí quyết tối ưu hóa không gian cho ngôi nhà nhỏ</a></h3>
                                 <p>Các giải pháp thiết kế nội thất sáng tạo giúp ngôi nhà của bạn trở nên rộng rãi và thoáng đãng hơn…</p>
                             </div>
                         </div>
@@ -943,7 +903,7 @@
                                     <li>20 Tháng 12, 2025</li>
                                     <li>Bởi <span>Admin</span></li>
                                 </ul>
-                                <h3 class="title"><a href="#">Xu hướng màu sắc trong thiết kế năm 2025</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Xu hướng màu sắc trong thiết kế năm 2025</a></h3>
                                 <p>Khám phá những gam màu sẽ lên ngôi và cách ứng dụng chúng vào không gian sống của bạn…</p>
                             </div>
                         </div>
@@ -959,7 +919,7 @@
                                     <li>15 Tháng 12, 2025</li>
                                     <li>Bởi <span>Admin</span></li>
                                 </ul>
-                                <h3 class="title"><a href="#">Vật liệu bền vững trong xây dựng hiện đại</a></h3>
+                                <h3 class="title"><a href="javascript:void(0);">Vật liệu bền vững trong xây dựng hiện đại</a></h3>
                                 <p>Sử dụng các vật liệu thân thiện với môi trường là chìa khóa cho kiến trúc bền vững trong tương lai…</p>
                             </div>
                         </div>
@@ -967,7 +927,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 text-center mt-50">
-                        <a href="#" class="tl-btn-primary">
+                        <a href="javascript:void(0);" class="tl-btn-primary">
                             <span>Xem Tất Cả Bài Viết</span>
                             <i class="fa-regular fa-arrow-right-long"></i>
                         </a>
@@ -1033,7 +993,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-widget footer-col-2 pl-0">
                             <ul class="footer-list">
-                                <li><a href="portfolio-details.html">Dự án của chúng tôi</a></li>
+                                <li><a href="javascript:void(0);">Dự án của chúng tôi</a></li>
                                 <li><a href="contact.html">Đối tác</a></li>
                                 <li><a href="contact.html">Chương trình đối tác</a></li>
                                 <li><a href="contact.html">Chương trình liên kết</a></li>
@@ -1048,10 +1008,10 @@
                                 <a class="number" href="tel:0123456789">0123 456 789</a>
                                 <a class="mail" href="mailto:info@zenithhouse.vn">info@zenithhouse.vn</a>
                                 <ul class="social-list">
-                                    <li><a href="#">Facebook</a></li>
-                                    <li><a href="#">Instagram</a></li>
-                                    <li><a href="#">YouTube</a></li>
-                                    <li><a href="#">Twitter</a></li>
+                                    <li><a href="javascript:void(0);">Facebook</a></li>
+                                    <li><a href="javascript:void(0);">Instagram</a></li>
+                                    <li><a href="javascript:void(0);">YouTube</a></li>
+                                    <li><a href="javascript:void(0);">Twitter</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1150,4 +1110,7 @@
         </script>
     </body>
 </html>
+
+
+
 

@@ -1,16 +1,16 @@
 /* Text Animation */
-.antra-animation,
-.antra-animation span {
+.zenith-animation,
+.zenith-animation span {
     animation-duration: 0.3s;
     animation-fill-mode: both;
 }
 
-.antra-animation span {
+.zenith-animation span {
     display: inline-block;
 }
 
 /* Fade Effect */
-.antra-fadeIn {
+.zenith-fadeIn {
     animation-name: asFadeIn;
 }
 
@@ -24,7 +24,7 @@
     }
 }
 
-.antra-fadeInLeft {
+.zenith-fadeInLeft {
     animation-name: asFadeInLeft;
 }
 
@@ -39,7 +39,7 @@
     }
 }
 
-.antra-fadeInRight {
+.zenith-fadeInRight {
     animation-name: asFadeInRight;
 }
 
@@ -54,7 +54,7 @@
     }
 }
 
-.antra-fadeInDown {
+.zenith-fadeInDown {
     animation-name: asFadeInTop;
 }
 
@@ -69,7 +69,7 @@
     }
 }
 
-.antra-fadeInUp {
+.zenith-fadeInUp {
     animation-name: asFadeInBottom;
 }
 
@@ -85,7 +85,7 @@
 }
 
 /* Move From Effect */
-.antra-moveFromLeft {
+.zenith-moveFromLeft {
     animation-name: asMoveFromLeft;
 }
 
@@ -100,7 +100,7 @@
     }
 }
 
-.antra-moveFromRight {
+.zenith-moveFromRight {
     animation-name: asMoveFromRight;
 }
 
@@ -115,7 +115,7 @@
     }
 }
 
-.antra-moveFromTop {
+.zenith-moveFromTop {
     animation-name: asMoveFromTop;
 }
 
@@ -130,7 +130,7 @@
     }
 }
 
-.antra-moveFromBottom {
+.zenith-moveFromBottom {
     animation-name: asMoveFromBottom;
 }
 
@@ -147,7 +147,7 @@
 
 /* Blur Effect */
 
-.antra-blurIn {
+.zenith-blurIn {
     animation-name: asBlurIn;
 }
 
@@ -158,7 +158,7 @@
     }
 }
 
-.antra-blurInLeft {
+.zenith-blurInLeft {
     animation-name: asBlurInLeft;
 }
 
@@ -170,7 +170,7 @@
     }
 }
 
-.antra-blurInRight {
+.zenith-blurInRight {
     animation-name: asBlurInRight;
 }
 
@@ -182,7 +182,7 @@
     }
 }
 
-.antra-blurInTop {
+.zenith-blurInTop {
     animation-name: asBlurInTop;
 }
 
@@ -194,7 +194,7 @@
     }
 }
 
-.antra-blurInBottom {
+.zenith-blurInBottom {
     animation-name: asBlurInBottom;
 }
 
@@ -207,7 +207,7 @@
 }
 
 /* Zoom Effect */
-.antra-zoomIn {
+.zenith-zoomIn {
     animation-name: asZoomIn;
 }
 
@@ -218,7 +218,7 @@
     }
 }
 
-.antra-zoomInLeft {
+.zenith-zoomInLeft {
     animation-name: asZoomInLeft;
 }
 
@@ -229,7 +229,7 @@
     }
 }
 
-.antra-zoomInRight {
+.zenith-zoomInRight {
     animation-name: asZoomInRight;
 }
 
@@ -240,7 +240,7 @@
     }
 }
 
-.antra-zoomInTop {
+.zenith-zoomInTop {
     animation-name: asZoomInTop;
 }
 
@@ -251,7 +251,7 @@
     }
 }
 
-.antra-zoomInBottom {
+.zenith-zoomInBottom {
     animation-name: asZoomInBottom;
 }
 
@@ -263,7 +263,7 @@
 }
 
 /* Flip Effect */
-.antra-flipInTop {
+.zenith-flipInTop {
     animation-name: asFlipInTop;
 }
 
@@ -284,7 +284,7 @@
     }
 }
 
-.antra-flipInBottom {
+.zenith-flipInBottom {
     animation-name: asFlipInBottom;
 }
 
@@ -306,7 +306,7 @@
 }
 
 /* Roll Effect */
-.antra-rollFromLeft {
+.zenith-rollFromLeft {
     animation-name: asRollFromLeft;
 }
 
@@ -317,7 +317,7 @@
     }
 }
 
-.antra-rollFromRight {
+.zenith-rollFromRight {
     animation-name: asRollFromRight;
 }
 
@@ -328,7 +328,7 @@
     }
 }
 
-.antra-rollFromTop {
+.zenith-rollFromTop {
     animation-name: asRollFromTop;
 }
 
@@ -339,7 +339,7 @@
     }
 }
 
-.antra-rollFromBottom {
+.zenith-rollFromBottom {
     animation-name: asRollFromBottom;
 }
 
@@ -351,7 +351,7 @@
 }
 
 /* Rotate Skate Effect */
-.antra-rotateSkateInRight {
+.zenith-rotateSkateInRight {
     animation-name: asRotateSkateInRight;
 }
 
@@ -362,7 +362,7 @@
     }
 }
 
-.antra-rotateSkateInLeft {
+.zenith-rotateSkateInLeft {
     animation-name: asRotateSkateInLeft;
 }
 
@@ -373,7 +373,7 @@
     }
 }
 
-.antra-rotateSkateInTop {
+.zenith-rotateSkateInTop {
     animation-name: asRotateSkateInTop;
 }
 
@@ -384,7 +384,7 @@
     }
 }
 
-.antra-rotateSkateInBottom {
+.zenith-rotateSkateInBottom {
     animation-name: asRotateSkateInBottom;
 }
 
@@ -396,7 +396,7 @@
 }
 
 /* PopUp Effect */
-.antra-popUp {
+.zenith-popUp {
     animation-name: asPopUp;
 }
 
@@ -411,7 +411,7 @@
     }
 }
 
-.antra-popUpLeft {
+.zenith-popUpLeft {
     animation-name: asPopUpLeft;
 }
 
@@ -427,7 +427,7 @@
     }
 }
 
-.antra-popUpRight {
+.zenith-popUpRight {
     animation-name: asPopUpRight;
 }
 

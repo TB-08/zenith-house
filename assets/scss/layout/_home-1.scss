@@ -6,7 +6,7 @@
 
 // Slider CSS
 
-.antra-slider{
+.zenith-slider{
     .slider-item{
         position: relative;
         z-index: 1;
@@ -78,7 +78,7 @@
         @include breakpoint(lg){
             padding-left: 0;
         }
-        .antra-desc{
+        .zenith-desc{
             margin-bottom: 40px;
             p{
                 color: var(--tl-color-common-white);
@@ -1127,7 +1127,7 @@
 
 // Panoroma
 
-.antra-panoroma-area{
+.zenith-panoroma-area{
     background-color: #eee;
     position: relative;
     z-index: 1;
@@ -1142,9 +1142,9 @@
     }
 }
 
-.antra-panoroma-container{
+.zenith-panoroma-container{
     background-color: #eee;
-    .antra-panoroma-img,
+    .zenith-panoroma-img,
     .panolens-canvas{
         background-color: #eee;
         width: 100%;
@@ -1177,3 +1177,4 @@
 }
 
 /* !END: Home 1 CSS */
+

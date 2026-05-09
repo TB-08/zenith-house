@@ -107,10 +107,10 @@
 
   // Panorama Image
   var panorama, panoViewer, panoContainer;
-  panoContainer = document.querySelector(".antra-panoroma-img");
+  panoContainer = document.querySelector(".zenith-panoroma-img");
 
   if (panoContainer) {
-    var antraData = $(".antra-panoroma-img").data("img");
+    var antraData = $(".zenith-panoroma-img").data("img");
     panorama = new PANOLENS.ImagePanorama(antraData);
     panoViewer = new PANOLENS.Viewer({ container: panoContainer });
     panoViewer.add(panorama);
@@ -125,14 +125,16 @@
 
   $(document).ready(function () {
     // Image Comparison Slider
-    $(".antra-image-comparison").twentytwenty({
-      default_offset_pct: 0.5,
-      orientation: "horizontal",
-      no_overlay: true,
-      move_slider_on_hover: true,
-      move_with_handle_only: false,
-      click_to_move: false,
-    });
+    if ($(".zenith-image-comparison").length) {
+      $(".zenith-image-comparison").twentytwenty({
+        default_offset_pct: 0.5,
+        orientation: "horizontal",
+        no_overlay: true,
+        move_slider_on_hover: true,
+        move_with_handle_only: false,
+        click_to_move: false,
+      });
+    }
 
     if (navigator.userAgent.toLowerCase().indexOf("firefox") > -1) {
       $("body").addClass("firefox");
@@ -258,7 +260,7 @@
     });
 
     // Custom Cursor
-    function customCursor(viewSelector = ".antra-hover-view") {
+    function customCursor(viewSelector = ".zenith-hover-view") {
       $("body").append('<div class="mt-cursor"></div>');
       $("body").append('<div class="mt-cursor-view"></div>');
 
@@ -1608,12 +1610,12 @@
   const sm = gsap.matchMedia();
   sm.add("(min-width: 768px)", () => {
     if (
-      document.querySelector("#antra-smooth-wrapper") &&
-      document.querySelector("#antra-smooth-content")
+      document.querySelector("#zenith-smooth-wrapper") &&
+      document.querySelector("#zenith-smooth-content")
     ) {
       ScrollSmoother.create({
-        wrapper: "#antra-smooth-wrapper",
-        content: "#antra-smooth-content",
+        wrapper: "#zenith-smooth-wrapper",
+        content: "#zenith-smooth-content",
         smooth: 1.8,
         effects: true,
         smoothTouch: 0.15,
@@ -1631,20 +1633,3 @@
   });
 })(jQuery);
 
-// Dynamic Active Menu Link Fix
-document.addEventListener('DOMContentLoaded', function() {
-    var currentPath = window.location.pathname.split('/').pop() || 'index.html';
-    var menuLinks = document.querySelectorAll('.mobile-menu-items a, .footer-list a');
-    menuLinks.forEach(function(link) {
-        var href = link.getAttribute('href');
-        if (href === currentPath) {
-            link.parentElement.classList.add('active');
-            // If it's a sub-link, also make parent active
-            var parentLi = link.closest('li');
-            if (parentLi) parentLi.classList.add('active');
-        } else {
-            // Only remove if it's the exact same menu level
-            // link.parentElement.classList.remove('active'); 
-        }
-    });
-});

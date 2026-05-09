@@ -10,7 +10,7 @@
             .bottom-content{
                 @include flex-vertical-center;
                 justify-content: space-between;
-                .antra-desc{
+                .zenith-desc{
                     grid-template-columns: 1fr;
                 }
                 .slider-video-area{
@@ -282,3 +282,4 @@
 }
 
 /* !END: Home 9 CSS */
+

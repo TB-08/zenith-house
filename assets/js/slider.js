@@ -3,7 +3,7 @@
 
     $(document).ready(function () {
         // 1. Check if the slider element exists. If not, exit early.
-        if ($(".antra-slider").length === 0) {
+        if ($(".zenith-slider").length === 0) {
             return; 
         }
 
@@ -14,7 +14,7 @@
                 var $this = $(this);
                 var delay = $this.data("delay");
                 var duration = $this.data("duration");
-                var animationType = "antra-animation " + $this.data("animation");
+                var animationType = "zenith-animation " + $this.data("animation");
                 
                 $this.css({
                     opacity: 1,
@@ -38,7 +38,7 @@
             grabCursor: true,
             autoplay: false,
             pagination: {
-                el: ".antra-swiper-pagination",
+                el: ".zenith-swiper-pagination",
                 clickable: true,
             },
             navigation: {
@@ -59,7 +59,7 @@
         };
 
         /* create swiper globally */
-        window.mainSlider = new Swiper(".antra-slider", sliderOptions);
+        window.mainSlider = new Swiper(".zenith-slider", sliderOptions);
 
         /* ============================ START AFTER PRELOADER ============================ */
         window.startSliderAfterPreload = function () {

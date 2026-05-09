@@ -1,6 +1,6 @@
 (function ($) {
     "use strict";
-    function initAntraBannerProcess() {
+    function initZenithBannerProcess() {
         // 1. Initialize Swiper
         const swiperContainer = document.querySelector('.banner-process-carousel');
         if (swiperContainer) {
@@ -184,5 +184,5 @@
     }
 
     // Initialize when DOM is loaded
-    document.addEventListener('DOMContentLoaded', initAntraBannerProcess);
+    document.addEventListener('DOMContentLoaded', initZenithBannerProcess);
 })(jQuery);
