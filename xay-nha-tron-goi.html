@@ -15,11 +15,18 @@
         <!-- CSS here -->
         <link rel="stylesheet" href="assets/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+        <link rel="stylesheet" href="assets/css/venobox.min.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/nice-select.css">
+        <link rel="stylesheet" href="assets/css/carouselTicker.css">
+        <link rel="stylesheet" href="assets/css/animation.css">
+        <link rel="stylesheet" href="assets/css/swiper.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header-compact.css">
         <link rel="stylesheet" href="assets/css/nav-dropdown.css">
         <link rel="stylesheet" href="assets/css/service-detail-luxury.css">
         <link rel="stylesheet" href="assets/css/architecture-showcase.css">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
         
         <style>
             :root {
@@ -29,24 +36,35 @@
             }
 
             body { background-color: var(--dark-bg); color: #fff; }
-            
 
-
-            /* Header Fix for Visibility */
+            /* Header Fix for Visibility & Overlay */
             .header {
-                position: fixed !important;
+                position: absolute !important;
                 width: 100%;
                 top: 0;
                 left: 0;
                 z-index: 1000 !important;
-                background: transparent;
+                background: transparent !important;
+                height: auto !important;
                 transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             }
-            .header.sticky-active {
-                background: rgba(10, 10, 10, 0.95);
-                backdrop-filter: blur(10px);
-                border-bottom: 1px solid rgba(255,255,255,0.05);
+            .primary-header { background: transparent !important; }
+            .header.sticky-active .primary-header.fixed {
+                background: #432D1E !important;
+                position: fixed !important;
+                top: 0;
+                left: 0;
+                width: 100%;
+                z-index: 1000 !important;
+                animation: menuSticky 1s ease;
             }
+
+            @keyframes menuSticky {
+                0% { transform: translateY(-100%); }
+                100% { transform: translateY(0); }
+            }
+
+
 
             /* Service Detail Hero Style */
             .service-detail-hero {
@@ -59,6 +77,7 @@
                 text-align: center;
                 overflow: hidden;
                 background: #000;
+                padding: 0 !important;
             }
             .service-detail-hero .hero-bg {
                 position: absolute;
@@ -146,6 +165,7 @@
                 min-height: 100vh !important;
                 display: flex !important;
                 flex-direction: column !important;
+                justify-content: flex-end !important;
             }
             .footer-section.footer-immersive .bg-text {
                 position: absolute !important;
@@ -171,9 +191,62 @@
                 z-index: 5 !important;
             }
 
+            /* Consultation Section Clone from portfolio.html */
+            .consultation-section { 
+                background: #fdfdfd; 
+                min-height: 100vh; 
+                display: flex; 
+                align-items: center; 
+                padding: 40px 0;
+            }
+            .consultation-card { background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); width: 100%; max-width: 1100px; margin: 0 auto; }
+            .consultation-img { height: 100%; background-size: cover; background-position: center; position: relative; min-height: 650px; }
+            .img-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px; background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%); color: #fff; }
+            .img-overlay h3 { font-size: 32px; font-weight: 800; color: #C8A97E; margin-bottom: 5px; }
+            .form-wrapper { padding: 40px 50px; }
+            .form-header { margin-bottom: 25px; text-align: center; }
+            .form-header .sub { font-size: 10px; text-transform: uppercase; letter-spacing: 3px; color: #C8A97E; margin-bottom: 8px; }
+            .form-header .title { font-size: 32px; font-weight: 700; color: #222; }
+            
+            .luxury-contact-form .form-control, 
+            .luxury-contact-form .form-select { 
+                border: 1px solid #f0f0f0 !important; 
+                border-radius: 8px !important; 
+                padding: 12px 18px !important; 
+                font-size: 14px !important;
+                background: #fcfcfc !important;
+                transition: all 0.3s ease;
+                color: #222 !important;
+            }
+            .luxury-contact-form .form-control:focus { border-color: #C8A97E !important; box-shadow: 0 5px 15px rgba(200,169,126,0.1) !important; }
+            .luxury-contact-form .form-control::placeholder { color: #aaa !important; }
+            
+            .budget-label { font-size: 11px; font-weight: 700; color: #222; margin-bottom: 10px; display: block; text-transform: uppercase; letter-spacing: 1px; }
+            .budget-radios { display: flex; flex-wrap: wrap; gap: 15px; }
+            .radio-item { position: relative; padding-left: 24px; cursor: pointer; font-size: 13px; color: #666; user-select: none; }
+            .radio-item input { position: absolute; opacity: 0; cursor: pointer; }
+            .checkmark { position: absolute; top: 1px; left: 0; height: 16px; width: 16px; background-color: #eee; border-radius: 50%; }
+            .radio-item input:checked ~ .checkmark { background-color: #C8A97E; }
+            .radio-item .checkmark:after { top: 4px; left: 4px; width: 8px; height: 8px; border-radius: 50%; background: white; }
+            
+            .submit-luxury-btn { 
+                background: #C8A97E; 
+                color: #fff; 
+                border: none; 
+                padding: 15px 45px; 
+                border-radius: 50px; 
+                font-weight: 700; 
+                font-size: 14px; 
+                letter-spacing: 1.5px; 
+                transition: all 0.4s ease; 
+                box-shadow: 0 10px 30px rgba(200,169,126,0.2);
+            }
+            .submit-luxury-btn:hover { background: #222; transform: translateY(-3px); box-shadow: 0 15px 35px rgba(0,0,0,0.15); }
+
             @media (max-width: 991px) {
                 .bento-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
                 .bento-item.large, .bento-item.tall, .bento-item.wide, .bento-item.small { grid-column: span 1; grid-row: span 1; height: 400px; }
+                .form-wrapper { padding: 30px 20px; }
             }
         </style>
     </head>
@@ -194,7 +267,13 @@
                             <div class="header-menu-wrap">
                                 <div class="mobile-menu-items">
                                     <ul>
-                                        <li><a href="index.html">Trang chủ</a></li>
+                                        <li class="has-submenu">
+                                            <a href="index.html">Trang chủ <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="about.html">Về chúng tôi</a></li>
+                                                <li><a href="contact.html">Liên hệ</a></li>
+                                            </ul>
+                                        </li>
                                         <li class="has-submenu active">
                                             <a href="service.html">Dịch vụ <i class="fa-solid fa-chevron-down"></i></a>
                                             <ul class="submenu">
@@ -212,9 +291,15 @@
                                                 <li><a href="can-ho.html">Căn Hộ</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="about.html">Về chúng tôi</a></li>
-                                        <li><a href="blog-grid.html">Tin tức</a></li>
-                                        <li><a href="contact.html">Liên hệ</a></li>
+                                        
+                                        <li class="has-submenu ">
+                                            <a href="cam-nang.html">Cẩm Nang <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="kien-thuc-xay-nha.html">Kiến Thức Xây Nhà</a></li>
+                                                <li><a href="kien-thuc-phong-thuy.html">Kiến Thức Phong Thủy</a></li>
+                                            </ul>
+                                        </li>
+                                        
                                     </ul>
                                 </div>
                             </div>
@@ -228,24 +313,14 @@
                                 </span>
                             </a>
                             <div class="header-btn-wrap">
-                                <a href="contact.html" class="tl-primary-btn header-btn">Liên hệ ngay</a>
+                                <a href="contact.html" class="tl-primary-btn header-btn">Nhận Tư Vấn</a>
                             </div>
-                            <div class="sidebar-icon">
-                                <button class="sidebar-trigger open">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11 2C11 0.89543 11.8954 0 13 0H14C15.1046 0 16 0.895431 16 2V3C16 4.10457 15.1046 5 14 5H13C11.8954 5 11 4.10457 11 3V2Z" fill="white"/>
-                                        <path d="M0 2C0 0.89543 0.895431 0 2 0H3C4.10457 0 5 0.895431 5 2V3C5 4.10457 4.10457 5 3 5H2C0.89543 5 0 4.10457 0 3V2Z" fill="white"/>
-                                        <path d="M0 13C0 11.8954 0.895431 11 2 11H3C4.10457 11 5 11.8954 5 13V14C5 15.1046 4.10457 16 3 16H2C0.89543 16 0 15.1046 0 14V13Z" fill="white"/>
-                                        <path d="M11 13C11 11.8954 11.8954 11 13 11H14C15.1046 11 16 11.8954 16 13V14C16 15.1046 15.1046 16 14 16H13C11.8954 16 11 15.1046 11 14V13Z" fill="white"/>
-                                    </svg>
-                                </button>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
             </div>
         </header>
-        <!-- header-area-end -->
 
         <div id="zenith-smooth-wrapper">
             <div id="zenith-smooth-content">
@@ -254,9 +329,9 @@
                 <section class="service-detail-hero">
                     <img src="assets/img/service/full_service_home_build_1778165230419.png" alt="Full Service Hero" class="hero-bg">
                     <div class="container">
-                        <div class="hero-content">
+                        <div class="hero-content" style="text-align: center;">
                             <span class="arch-tag" style="color: #C8A97E; letter-spacing: 10px; font-weight: 600; margin-bottom: 20px; display: block;">FULL-SERVICE BUILDING</span>
-                            <h1 class="cursor-effect">Xây Nhà <span>Trọn Gói</span></h1>
+                             <h1 class="cursor-effect" style="font-size: clamp(40px, 7vw, 100px); color: #fff; font-weight: 200; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 25px; line-height: 1.2; white-space: nowrap;">Xây Nhà <span style="color: #C8A97E; font-weight: 800;">Trọn Gói</span></h1>
                             <p style="color: rgba(255,255,255,0.7); max-width: 650px; margin: 0 auto; font-size: 18px;">Chìa khóa trao tay - Hiện thực hóa giấc mơ về một tổ ấm hoàn mỹ với sự tinh thông và tận tâm tuyệt đối.</p>
                         </div>
                     </div>
@@ -314,7 +389,6 @@
                     </div>
                 </section>
 
-                <!-- Consultation Section -->
                 <section class="consultation-section">
                     <div class="container">
                         <div class="consultation-card shadow-lg">
@@ -341,28 +415,28 @@
                                                     <input type="text" class="form-control" placeholder="Họ và tên (*)" required>
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <input type="tel" class="form-control" placeholder="SĐT (*)" required>
+                                                    <input type="text" class="form-control" placeholder="SĐT (*)" required>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <input type="email" class="form-control" placeholder="Email liên hệ (*)" required>
                                                 </div>
-                                                <div class="col-md-6">
-                                                    <select class="form-select">
-                                                        <option disabled>Dịch vụ cần tư vấn (*)</option>
+                                                <div class="col-12">
+                                                    <select class="form-select" required>
+                                                        <option value="" selected disabled>Dịch vụ cần tư vấn (*)</option>
                                                         <option>Thiết kế kiến trúc</option>
                                                         <option>Thiết kế & Thi công nội thất</option>
-                                                        <option selected>Xây nhà trọn gói</option>
                                                         <option>Thi công phần thô</option>
+                                                        <option selected>Xây nhà trọn gói</option>
                                                     </select>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <input type="text" class="form-control" placeholder="Địa phương xây dựng (*)" required>
                                                 </div>
-                                                <div class="col-12">
-                                                    <select class="form-select">
-                                                        <option selected disabled>Loại hình xây dựng (*)</option>
-                                                        <option>Biệt thự / Villa</option>
-                                                        <option>Nhà phố / Shophouse</option>
+                                                <div class="col-md-6">
+                                                    <select class="form-select" required>
+                                                        <option value="" selected disabled>Loại hình xây dựng (*)</option>
+                                                        <option>Biệt thự</option>
+                                                        <option>Nhà phố</option>
                                                         <option>Căn hộ cao cấp</option>
                                                     </select>
                                                 </div>
@@ -392,58 +466,6 @@
                         </div>
                     </div>
                 </section>
-                
-                <style>
-                    .consultation-section { background: #fdfdfd; padding: 100px 0; }
-                    .consultation-card { background: #fff; border-radius: 20px; overflow: hidden; border: 1px solid rgba(0,0,0,0.05); width: 100%; max-width: 1100px; margin: 0 auto; }
-                    .consultation-img { height: 100%; background-size: cover; background-position: center; position: relative; min-height: 650px; }
-                    .img-overlay { position: absolute; bottom: 0; left: 0; width: 100%; padding: 40px; background: linear-gradient(0deg, rgba(0,0,0,0.9) 0%, transparent 100%); color: #fff; }
-                    .img-overlay h3 { font-size: 32px; font-weight: 800; color: #C8A97E; margin-bottom: 5px; }
-                    .form-wrapper { padding: 40px 50px; }
-                    .form-header { margin-bottom: 25px; text-align: center; }
-                    .form-header .sub { font-size: 10px; text-transform: uppercase; letter-spacing: 3px; color: #C8A97E; margin-bottom: 8px; }
-                    .form-header .title { font-size: 32px; font-weight: 700; color: #222; }
-                    
-                    .luxury-contact-form .form-control, 
-                    .luxury-contact-form .form-select { 
-                        border: 1px solid #f0f0f0 !important; 
-                        border-radius: 8px !important; 
-                        padding: 12px 18px !important; 
-                        font-size: 14px !important;
-                        background: #fcfcfc !important;
-                        transition: all 0.3s ease;
-                        color: #222 !important;
-                    }
-                    .luxury-contact-form .form-control:focus { border-color: #C8A97E !important; box-shadow: 0 5px 15px rgba(200,169,126,0.1) !important; }
-                    .luxury-contact-form .form-control::placeholder { color: #aaa !important; }
-                    
-                    .budget-label { font-size: 11px; font-weight: 700; color: #222; margin-bottom: 10px; display: block; text-transform: uppercase; letter-spacing: 1px; }
-                    .budget-radios { display: flex; flex-wrap: wrap; gap: 15px; }
-                    .radio-item { position: relative; padding-left: 24px; cursor: pointer; font-size: 13px; color: #666; user-select: none; }
-                    .radio-item input { position: absolute; opacity: 0; cursor: pointer; }
-                    .checkmark { position: absolute; top: 1px; left: 0; height: 16px; width: 16px; background-color: #eee; border-radius: 50%; }
-                    .radio-item input:checked ~ .checkmark { background-color: #C8A97E; }
-                    .radio-item .checkmark:after { top: 4px; left: 4px; width: 8px; height: 8px; border-radius: 50%; background: white; }
-                    
-                    .submit-luxury-btn { 
-                        background: #C8A97E; 
-                        color: #fff; 
-                        border: none; 
-                        padding: 15px 45px; 
-                        border-radius: 50px; 
-                        font-weight: 700; 
-                        font-size: 14px; 
-                        letter-spacing: 1.5px; 
-                        transition: all 0.4s ease; 
-                        box-shadow: 0 8px 20px rgba(200,169,126,0.25);
-                        cursor: pointer;
-                    }
-                    .submit-luxury-btn:hover { background: #222; transform: translateY(-2px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
-                    
-                    @media (max-width: 991px) {
-                        .form-wrapper { padding: 30px 20px; }
-                    }
-                </style>
 
                 <footer class="footer-section footer-immersive overflow-hidden">
                     <div class="footer-bg" style="background-image: url('assets/img/service/luxury_interior_footer_bg.png') !important; opacity: 0.5 !important;"></div>
@@ -470,7 +492,8 @@
                                         <li><a href="service.html">Dịch vụ</a></li>
                                         <li><a href="contact.html">Tuyển dụng</a></li>
                                         <li><a href="team.html">Đội ngũ</a></li>
-                                        <li><a href="blog-grid.html">Tin tức</a></li>
+                                        <li><a href="cam-nang.html">Cẩm Nang</a></li>
+                                    <li><a href="pricing.html">Báo Giá</a></li>
                                         <li><a href="contact.html">Liên hệ</a></li>
                                     </ul>
                                 </div>
@@ -536,6 +559,3 @@
         <script src="assets/js/main.js"></script>
     </body>
 </html>
-
-
-

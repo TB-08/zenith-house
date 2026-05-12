@@ -22,6 +22,7 @@
         <link rel="stylesheet" href="assets/css/animation.css">
         <link rel="stylesheet" href="assets/css/swiper.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header-compact.css">
         <link rel="stylesheet" href="assets/css/blog-fix.css">
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;700&display=swap" rel="stylesheet">
     </head>
@@ -46,22 +47,40 @@
                             <div class="header-menu-wrap">
                                 <div class="mobile-menu-items">
                                     <ul>
-                                        <li>
-                                            <a href="index.html">Trang chủ</a>
+                                        <li class="has-submenu ">
+                                            <a href="index.html">Trang Chủ <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="about.html">Về chúng tôi</a></li>
+                                                <li><a href="contact.html">Liên hệ</a></li>
+                                            </ul>
                                         </li>
-                                        <li>
-                                            <a href="service.html">Dịch vụ</a>
+                                        <li class="has-submenu ">
+                                            <a href="service.html">Dịch Vụ <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="thiet-ke-kien-truc.html">Thiết kế kiến trúc</a></li>
+                                                <li><a href="thiet-ke-noi-that.html">Thiết kế &amp; Thi công nội thất</a></li>
+                                                <li><a href="thi-cong-phan-tho.html">Thi công phần thô</a></li>
+                                                <li><a href="xay-nha-tron-goi.html">Xây nhà trọn gói</a></li>
+                                            </ul>
                                         </li>
-                                        <li>
-                                            <a href="portfolio.html">Dự án</a>
+                                        <li class="has-submenu ">
+                                            <a href="portfolio.html">Dự Án <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="nha-pho.html">Nhà Phố</a></li>
+                                                <li><a href="biet-thu.html">Biệt Thự</a></li>
+                                                <li><a href="can-ho.html">Căn Hộ</a></li>
+                                            </ul>
                                         </li>
-                                        <li>
-                                            <a href="about.html">Về chúng tôi</a>
+                                    <li>
+                                        <a href="pricing.html">Báo Giá</a>
+                                    </li>
+                                        <li class="has-submenu ">
+                                            <a href="cam-nang.html">Cẩm Nang <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="kien-thuc-xay-nha.html">Kiến Thức Xây Nhà</a></li>
+                                                <li><a href="kien-thuc-phong-thuy.html">Kiến Thức Phong Thủy</a></li>
+                                            </ul>
                                         </li>
-                                        <li class="active">
-                                            <a href="blog-grid.html">Tin tức</a>
-                                        </li>
-                                        <li><a href="contact.html">Liên hệ</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -70,25 +89,12 @@
                             <a href="tel:0123456789" class="header-contact">
                                 <span class="icon"><i class="fa-regular fa-phone"></i></span>
                                 <span class="content">
-                                    <span class="call-text">Gọi ngay cho chúng tôi</span>
+                                    <span class="call-text">Hotline liên hệ</span>
                                     <span class="call-number">0123 456 789</span>
                                 </span>
                             </a>
                             <div class="header-btn-wrap">
                                 <a href="contact.html" class="tl-primary-btn header-btn">Nhận Tư Vấn</a>
-                            </div>
-                            <div class="search-icon dl-search-icon">
-                                <i class="fa-solid fa-magnifying-glass"></i>
-                            </div>
-                            <div class="sidebar-icon">
-                                <button class="sidebar-trigger open">
-                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11 2C11 0.89543 11.8954 0 13 0H14C15.1046 0 16 0.895431 16 2V3C16 4.10457 15.1046 5 14 5H13C11.8954 5 11 4.10457 11 3V2Z" fill="white"/>
-                                        <path d="M0 2C0 0.89543 0.895431 0 2 0H3C4.10457 0 5 0.895431 5 2V3C5 4.10457 4.10457 5 3 5H2C0.89543 5 0 4.10457 0 3V2Z" fill="white"/>
-                                        <path d="M0 13C0 11.8954 0.895431 11 2 11H3C4.10457 11 5 11.8954 5 13V14C5 15.1046 4.10457 16 3 16H2C0.89543 16 0 15.1046 0 14V13Z" fill="white"/>
-                                        <path d="M11 13C11 11.8954 11.8954 11 13 11H14C15.1046 11 16 11.8954 16 13V14C16 15.1046 15.1046 16 14 16H13C11.8954 16 11 15.1046 11 14V13Z" fill="white"/>
-                                    </svg>
-                                </button>
                             </div>
                         </div>
                     </div>
@@ -236,11 +242,11 @@
             <div class="container" style="position: relative; z-index: 3;">
                 <div class="page-header-content" style="text-align: center;">
                     <div style="width: 60px; height: 1px; background: #C8A97E; margin: 0 auto 30px;"></div>
-                    <h1 class="title" style="text-transform: uppercase; font-size: clamp(40px, 8vw, 80px); letter-spacing: 20px; font-weight: 200; color: #ffffff; margin-bottom: 40px; font-family: 'Montserrat', sans-serif !important;">Tin tức</h1>
+                    <h1 class="title" style="text-transform: uppercase; font-size: clamp(40px, 8vw, 80px); letter-spacing: 20px; font-weight: 200; color: #ffffff; margin-bottom: 40px; font-family: 'Montserrat', sans-serif !important;">Cẩm Nang</h1>
                     <h4 class="sub-title" style="text-transform: uppercase; font-size: 14px; letter-spacing: 5px; font-weight: 500; font-family: 'Montserrat', sans-serif !important;">
                         <a class='home' href='index.html' style="color: #ffffff !important; opacity: 0.8;">Trang chủ</a>
                         <span class="icon" style="color: #C8A97E; margin: 0 20px;">/</span>
-                        <a class='inner-page' href='blog-single.html' style="color: #C8A97E !important;">Tin tức</a>
+                        <a class='inner-page' href='cam-nang.html' style="color: #C8A97E !important;">Cẩm Nang</a>
                     </h4>
                 </div>
             </div>
@@ -413,7 +419,7 @@
                                 <li><a href="service.html">Dịch vụ</a></li>
                                 <li><a href="contact.html">Tuyển dụng</a></li>
                                 <li><a href="team.html">Đội ngũ</a></li>
-                                <li><a href="blog-grid.html">Tin tức</a></li>
+                                <li><a href="cam-nang.html">Cẩm nang</a></li>
                                 <li><a href="contact.html">Liên hệ</a></li>
                             </ul>
                         </div>

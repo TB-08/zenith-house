@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="assets/css/animation.css">
     <link rel="stylesheet" href="assets/css/swiper.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/header-compact.css">
     <link rel="stylesheet" href="assets/css/nav-dropdown.css">
     <link rel="stylesheet" href="assets/css/sidebar-premium.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -35,71 +36,74 @@
 
 
     <!-- header-area-start -->
-    <header class="header sticky-active">
-        <div class="primary-header">
-            <div class="container">
-                <div class="primary-header-inner">
-                    <div class="header-left-wrap">
-                        <div class="header-logo d-lg-block">
-                            <a href="index.html">
-                                <img src="assets/img/logo/zenith-logo.png" alt="logo">
-                            </a>
+        <header class="header sticky-active">
+            <div class="primary-header">
+                <div class="container">
+                    <div class="primary-header-inner">
+                        <div class="header-left-wrap">
+                            <div class="header-logo d-lg-block">
+                                <a href="index.html">
+                                    <img src="assets/img/logo/zenith-logo.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="header-menu-wrap">
+                                <div class="mobile-menu-items">
+                                    <ul>
+                                        <li class="has-submenu active">
+                                            <a href="index.html">Trang Chủ <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="about.html">Về chúng tôi</a></li>
+                                                <li><a href="contact.html">Liên hệ</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-submenu ">
+                                            <a href="service.html">Dịch Vụ <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="thiet-ke-kien-truc.html">Thiết kế kiến trúc</a></li>
+                                                <li><a href="thiet-ke-noi-that.html">Thiết kế &amp; Thi công nội thất</a></li>
+                                                <li><a href="thi-cong-phan-tho.html">Thi công phần thô</a></li>
+                                                <li><a href="xay-nha-tron-goi.html">Xây nhà trọn gói</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="has-submenu ">
+                                            <a href="portfolio.html">Dự Án <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="nha-pho.html">Nhà Phố</a></li>
+                                                <li><a href="biet-thu.html">Biệt Thự</a></li>
+                                                <li><a href="can-ho.html">Căn Hộ</a></li>
+                                            </ul>
+                                        </li>
+                                    <li>
+                                        <a href="pricing.html">Báo Giá</a>
+                                    </li>
+                                        <li class="has-submenu ">
+                                            <a href="cam-nang.html">Cẩm Nang <i class="fa-solid fa-chevron-down"></i></a>
+                                            <ul class="submenu">
+                                                <li><a href="kien-thuc-xay-nha.html">Kiến Thức Xây Nhà</a></li>
+                                                <li><a href="kien-thuc-phong-thuy.html">Kiến Thức Phong Thủy</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="header-menu-wrap">
-                            <div class="mobile-menu-items">
-                                <ul>
-                                    <li>
-                                        <a href="index.html">Trang chủ</a>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="service.html">Dịch vụ <i class="fa-solid fa-chevron-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="thiet-ke-kien-truc.html">Thiết kế kiến trúc</a></li>
-                                            <li><a href="thiet-ke-noi-that.html">Thiết kế & Thi công nội thất</a></li>
-                                            <li><a href="thi-cong-phan-tho.html">Thi công phần thô</a></li>
-                                            <li><a href="xay-nha-tron-goi.html">Xây nhà trọn gói</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="has-submenu">
-                                        <a href="portfolio.html">Dự án <i class="fa-solid fa-chevron-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="nha-pho.html">Nhà Phố</a></li>
-                                            <li><a href="biet-thu.html">Biệt Thự</a></li>
-                                            <li><a href="can-ho.html">Căn Hộ</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="about.html">Về chúng tôi</a>
-                                    </li>
-                                    <li>
-                                        <a href="blog-grid.html">Tin tức</a>
-                                    </li>
-                                    <li class="active"><a href="contact.html">Liên hệ</a></li>
-                                </ul>
+                        <div class="header-right-wrap">
+                            <a href="tel:0123456789" class="header-contact">
+                                <span class="icon"><i class="fa-regular fa-phone"></i></span>
+                                <span class="content">
+                                    <span class="call-text">Hotline liên hệ</span>
+                                    <span class="call-number">0123 456 789</span>
+                                </span>
+                            </a>
+                            <div class="header-btn-wrap">
+                                <a href="contact.html" class="tl-primary-btn header-btn">Nhận Tư Vấn</a>
                             </div>
                         </div>
                     </div>
-                    <div class="header-right-wrap">
-                        <a href="tel:0123456789" class="header-contact">
-                            <span class="icon"><i class="fa-regular fa-phone"></i></span>
-                            <span class="content">
-                                <span class="call-text">Gọi ngay cho chúng tôi</span>
-                                <span class="call-number">0123 456 789</span>
-                            </span>
-                        </a>
-                        <div class="header-btn-wrap">
-                            <a href="contact.html" class="tl-primary-btn header-btn">Nhận Tư Vấn</a>
-                        </div>
-                        <div class="search-icon dl-search-icon">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-
-                    </div>
                 </div>
             </div>
-        </div>
-    </header>
-    <!-- /.Main Header -->
+        </header>
+        <!-- /.Main Header -->
 
     <div id="popup-search-box">
         <div class="box-inner-wrap d-flex align-items-center">
@@ -415,7 +419,8 @@
                                     <li><a href="service.html">Dịch vụ</a></li>
                                     <li><a href="contact.html">Tuyển dụng</a></li>
                                     <li><a href="team.html">Đội ngũ</a></li>
-                                    <li><a href="blog-grid.html">Tin tức</a></li>
+                                    <li><a href="cam-nang.html">Cẩm Nang</a></li>
+                                    <li><a href="pricing.html">Báo Giá</a></li>
                                     <li><a href="contact.html">Liên hệ</a></li>
                                 </ul>
                             </div>

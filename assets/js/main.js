@@ -103,7 +103,7 @@
   }
 
   /* start preloader */
-  animateBars();
+  // animateBars();
 
   // Panorama Image
   var panorama, panoViewer, panoContainer;
@@ -117,10 +117,10 @@
   }
 
   $(window).on("load", function () {
-    animateBars();
-    setTimeout(function () {
-      $(".preloader").remove();
-    }, 3000);
+    // animateBars();
+    // setTimeout(function () {
+    //   $(".preloader").remove();
+    // }, 3000);
   });
 
   $(document).ready(function () {

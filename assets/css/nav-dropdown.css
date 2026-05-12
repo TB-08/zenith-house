@@ -76,7 +76,7 @@
     display: block !important;
     margin: 0 !important;
     padding: 0 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-bottom: none !important;
     width: 100% !important;
 }
 
@@ -151,4 +151,15 @@
     .header .primary-header-inner .header-menu-wrap .mobile-menu-items ul li ul.submenu li a:hover {
         padding-left: 10px !important;
     }
+}
+
+/* Syncing menu size and position from index.html */
+.header .primary-header-inner .header-menu-wrap .mobile-menu-items > ul > li > a {
+    padding: 25px 0 !important;
+}
+.header .primary-header-inner .header-logo img {
+    max-width: 170px !important;
+}
+.header-btn {
+    padding: 12px 25px !important;
 }
